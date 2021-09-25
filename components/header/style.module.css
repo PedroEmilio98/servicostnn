@@ -1,0 +1,14 @@
+
+.painelPrincial{
+    background: #EFC221;
+    @apply p-10
+}
+
+.painelInferior{
+    background: #B1991B;
+    @apply p-4 text-center
+}
+
+.links{
+    @apply hover:underline text-white font-semibold
+}
