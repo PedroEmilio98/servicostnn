@@ -15,6 +15,7 @@ export default async (req, res) => {
     console.log(data)
 
     await sheet.addRow({
+      Status: "Inativo",
       Nome: data.Nome,
       Servicos: data.Servicos,
       Whatsapp: data.Whatsapp,

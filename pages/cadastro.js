@@ -14,6 +14,7 @@ const Cadastro = () => {
         Facebook: '',
         Instagram: '',
         horarioFuncionamento: ''
+
     })
     const [sucess, SetSucces] = useState(false);
 
