@@ -1,12 +1,18 @@
 
 .painelPrincial{
-    background: #EFC221;
-    @apply p-10
+    background:    #da6000;
+    @apply p-8
 }
 
 .painelInferior{
-    background: #B1991B;
-    @apply p-4 text-center
+    background: #da5e00a2;
+    @apply p-4 text-center 
+}
+.painelInferiorFixo{
+    background: #da5e00b0;
+    @apply p-4 text-center drop-shadow-lg;
+
+
 }
 
 .links{

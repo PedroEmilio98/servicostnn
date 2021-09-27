@@ -1,0 +1,44 @@
+
+@media only screen and (min-width: 900px){
+    
+
+.background{
+    background: #e9f2f9;
+    padding-bottom: 150px;
+}
+
+.servico{
+    background: #020D3F;
+    @apply mb-8 mx-20 p-6  flex
+}
+.infos{
+    color: #a0c4e6;
+    @apply inline w-3/5
+    
+}
+.contatos{
+    @apply inline w-2/5
+}
+.whatsapp{
+    background: #da6000;
+    @apply  w-3/5 py-2  my-1  mx-auto rounded-full text-white text-center
+}
+.facebook{
+    background: #da6000;
+    @apply  w-3/5 py-2 my-1  mx-auto rounded-full text-white text-center
+}
+.nome{
+    @apply text-3xl inline w-3/5 border-b-2 border-black
+}
+.horario{
+    @apply text-base mt-4
+}
+
+.servicos{
+    @apply text-base mt-3
+}
+.categoria{
+    @apply text-4xl py-4 px-20
+}
+
+}

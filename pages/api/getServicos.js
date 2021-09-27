@@ -6,8 +6,12 @@ const doc = new GoogleSpreadsheet('1A0KYVuOTjf8iGe9talDyEagONSDCH4RKjcy6JQ94eXI'
 export default async (req, res) => {
     await doc.useServiceAccountAuth(credenciais)
     await doc.loadInfo()
-    const planilha = doc.sheetsByTitle["Manutenção"]
+
+    const reqs = (req.body)
+
+    const planilha = doc.sheetsByTitle[reqs]
     const linhas = await planilha.getRows()
+
     const dados = linhas.map((linha) => {
         const serv = {
             Nome: linha.Nome,
@@ -20,8 +24,9 @@ export default async (req, res) => {
         }
         return serv
     })
+    const Ativos = dados.filter((servico) => servico.status === "Ativo")
 
     res.end(JSON.stringify(
-        dados
+        Ativos
     ))
 }
