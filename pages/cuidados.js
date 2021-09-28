@@ -72,8 +72,9 @@ const index = ({ servicos }) => {
             }
 
             {!servicos[0] &&
-                <div>
-                    Nenhum serviço cadastrado nesta categoria ainda. Clique em cadastrar para cadastrar um novo serviço!
+                <div className={style.painelSemCadastro}>
+                    <p>Nenhum serviço cadastrado nesta categoria ainda. </p>
+                    <p>Clique em cadastro para inserir um novo serviço!</p>
                 </div>
             }
         </div >

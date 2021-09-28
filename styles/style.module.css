@@ -46,6 +46,10 @@
 .imglogo{
     @apply w-8 inline
 }
+.painelSemCadastro{
+    border: #020D3F solid;
+    @apply  m-auto w-2/5 text-center py-12 mt-12 text-lg border-2;
+}
 
 }
 
@@ -96,6 +100,10 @@
     }
     .imglogo{
         @apply w-8 inline
+    }
+    .painelSemCadastro{
+        border: #020D3F solid;
+        @apply  m-auto w-4/5 text-center py-12 mt-12 text-base border-2;
     }
 
 }

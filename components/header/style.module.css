@@ -16,10 +16,12 @@
 }
 
 .linksuperior{
-    @apply hover:underline text-white font-semibold mx-8
+    color: #020D3F;
+    @apply hover:underline  font-semibold mx-8
 }
 .links{
-    @apply hover:underline text-white font-semibold mx-8
+    color: #020D3F;
+    @apply hover:underline  font-semibold mx-8
 }
 }
 @media only screen and (max-width: 900px){
@@ -36,10 +38,12 @@
         @apply p-4  drop-shadow-lg text-left;
     }
     .linksuperior{
-        @apply hover:underline text-white font-semibold inline p-2
+        color: #020D3F;
+        @apply hover:underline  font-semibold inline p-2
     }
     .links{
-        @apply hover:underline text-white font-semibold px-4 py-1 block text-center
+        color: #020D3F;
+        @apply hover:underline  font-semibold px-4 py-1 block text-center md:inline
     }
 
 }
