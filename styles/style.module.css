@@ -19,13 +19,13 @@
 .contatos{
     @apply inline w-2/5
 }
-.whatsapp{
+.botaocontatowhatss{
     background: #da6000;
     @apply  w-3/5 py-2  my-1  mx-auto rounded-full text-white text-center
 }
-.facebook{
+.botaocontato{
     background: #da6000;
-    @apply  w-3/5 py-2 my-1  mx-auto rounded-full text-white text-center
+    @apply  w-3/5 py-2 my-1  mx-auto rounded-full text-white text-center pl-4
 }
 .nome{
     @apply text-3xl inline w-3/5 border-b-2 border-black
@@ -40,5 +40,62 @@
 .categoria{
     @apply text-4xl py-4 px-20
 }
+.logo{
+    @apply inline right-2 p-2
+}
+.imglogo{
+    @apply w-8 inline
+}
+
+}
+
+@media only screen and (max-width: 900px){
+    .background{
+        background: #e9f2f9;
+        padding-bottom: 150px;
+    }
+    .servico{
+        background: #020D3F;
+        @apply mb-4 p-4 block
+    }
+    .infos{
+        color: #a0c4e6;
+        @apply inline w-3/5
+        
+    }
+    .categoria{
+        color: #020D3F;
+        @apply text-2xl font-bold py-4 text-center
+    }
+    .nome{
+        @apply text-2xl block w-full border-b-2 border-black
+    }
+    .horario{
+        @apply text-sm py-2
+    }
+    .servicos{
+        @apply text-sm mt-1 text-justify pb-2
+    }
+    .contatos{
+        @apply inline w-full
+    }
+   
+    
+    .botaocontato{
+        background: #da6000;
+        @apply   rounded-full text-white text-center py-3 my-2 max-w-md
+    }
+    .botaocontatowhatss{
+        padding-right: 16px;
+        background: #da6000;
+        @apply   rounded-full text-white text-center py-3 my-2 max-w-md
+    }
+    .logo{
+        
+        @apply  inline   p-2
+    }
+    .imglogo{
+        @apply w-8 inline
+    }
 
 }

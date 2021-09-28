@@ -9,54 +9,54 @@ export default function header() {
                     <img src='/logo.png' className='mx-auto w-48' />
                 </div>
                 <div className={style.painelInferior}>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/' >
-                            <a className={style.links}>Inicio</a>
+                            <a className={style.linksuperior}>Inicio</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/'>
-                            <a className={style.links}>Sobre</a>
+                            <a className={style.linksuperior}>Sobre</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/' >
-                            <a className={style.links}>Sugestões</a>
+                            <a className={style.linksuperior}>Sugestões</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
-                        <Link href='/' >
-                            <a className={style.links}>Cadastro</a>
+                    <span>
+                        <Link href='/cadastro' >
+                            <a className={style.linksuperior}>Cadastro</a>
                         </Link>
                     </span>
                 </div>
                 <div className={style.painelInferiorFixo}>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/' >
                             <a className={style.links}>Manutenção</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/ti'>
                             <a className={style.links}>T.I.</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/educacao' >
                             <a className={style.links}>Educação</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/gastronomia' >
                             <a className={style.links}>Gastronomia</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/fretes' >
                             <a className={style.links}>Fretes</a>
                         </Link>
                     </span>
-                    <span className='px-8'>
+                    <span>
                         <Link href='/cuidados'>
                             <a className={style.links}>Cuidados Pessoais</a>
                         </Link>

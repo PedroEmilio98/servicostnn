@@ -1,4 +1,6 @@
 
+@media only screen and (min-width: 900px){
+
 .painelPrincial{
     background:    #da6000;
     @apply p-8
@@ -11,10 +13,33 @@
 .painelInferiorFixo{
     background: #da5e00b0;
     @apply p-4 text-center drop-shadow-lg;
-
-
 }
 
+.linksuperior{
+    @apply hover:underline text-white font-semibold mx-8
+}
 .links{
-    @apply hover:underline text-white font-semibold
+    @apply hover:underline text-white font-semibold mx-8
+}
+}
+@media only screen and (max-width: 900px){
+    .painelPrincial{
+        background:    #da6000;
+        @apply p-8 w-full
+    }
+    .painelInferior{
+        background: #da5e00a2;
+        @apply p-4 text-center 
+    }
+    .painelInferiorFixo{
+        background: #da5e00b0;
+        @apply p-4  drop-shadow-lg text-left;
+    }
+    .linksuperior{
+        @apply hover:underline text-white font-semibold inline p-2
+    }
+    .links{
+        @apply hover:underline text-white font-semibold px-4 py-1 block text-center
+    }
+
 }

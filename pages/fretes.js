@@ -20,7 +20,7 @@ const index = ({ servicos }) => {
     return (
 
         <div className={style.background}>
-            <h1 className={style.categoria}>Fretes</h1>
+            <h1 className={style.categoria}>{categoria}</h1>
             {servicos[0] &&
                 servicos.map(servico => (
                     <div key={servico.Nome} className={style.servico}>
@@ -34,34 +34,34 @@ const index = ({ servicos }) => {
                         </div>
                         <div className={style.contatos}>
                             {servico.Whatsapp &&
-                                <Link className='inline mx-auto hover' href={zap(servico.Whatsapp)}>
-                                    <a className='' target='_blank'>
-                                        <div className={style.whatsapp}>
+                                <Link href={zap(servico.Whatsapp)}>
+                                    <a target='_blank'>
+                                        <div className={style.botaocontatowhatss}>
                                             Contato por Whatsapp
-                                            <div className='p-2 inline'>
-                                                <img src='./logo_Wpp1.png' className='w-8 inline right-2' />
+                                            <div className={style.logo}>
+                                                <img src='./logo_Wpp1.png' className={style.imglogo} />
                                             </div>
                                         </div>
                                     </a>
                                 </Link >}
                             {servico.Facebook &&
-                                <Link className='inline mx-auto hover' href={servico.Facebook}>
-                                    <a className='w-full' target='_blank'>
-                                        <div className={style.facebook}>
+                                <Link href={servico.Facebook}>
+                                    <a target='_blank'>
+                                        <div className={style.botaocontato}>
                                             Página no Facebook
-                                            <div className='p-2 inline'>
-                                                <img src='./logo_Fb.png' className='w-8 inline right-2' />
+                                            <div className={style.logo}>
+                                                <img src='./logo_Fb.png' className={style.imglogo} />
                                             </div>
                                         </div>
                                     </a>
                                 </Link >}
                             {servico.Instagram &&
-                                <Link className='inline mx-auto hover' href={servico.Instagram}>
-                                    <a className='w-full' target='_blank'>
-                                        <div className={style.facebook}>
+                                <Link href={servico.Instagram}>
+                                    <a target='_blank'>
+                                        <div className={style.botaocontato}>
                                             Página no Instagram
-                                            <div className='p-2 inline'>
-                                                <img src='./logo_Fb.png' className='w-8 inline right-2' />
+                                            <div className={style.logo}>
+                                                <img src='./logo_Ig.png' className={style.imglogo} />
                                             </div>
                                         </div>
                                     </a>
