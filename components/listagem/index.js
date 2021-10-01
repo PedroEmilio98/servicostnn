@@ -17,7 +17,7 @@ const listagem = (props, categoria) => {
                 <div className={style.contatos}>
                     {servico.Whatsapp &&
                         <Link href={zap(servico.Whatsapp)}>
-                            <a target='_blank'>
+                            <a target='_blank' rel="noreferrer">
                                 <div className={style.botaocontatowhatss}>
                                     Contato por Whatsapp
                                     <div className={style.logo}>
@@ -28,7 +28,7 @@ const listagem = (props, categoria) => {
                         </Link >}
                     {servico.Facebook &&
                         <Link href={servico.Facebook}>
-                            <a target='_blank'>
+                            <a target='_blank' rel="noreferrer">
                                 <div className={style.botaocontato}>
                                     Página no Facebook
                                     <div className={style.logo}>
@@ -39,7 +39,7 @@ const listagem = (props, categoria) => {
                         </Link >}
                     {servico.Instagram &&
                         <Link href={servico.Instagram}>
-                            <a target='_blank'>
+                            <a target='_blank' rel="noreferrer">
                                 <div className={style.botaocontato}>
                                     Página no Instagram
                                     <div className={style.logo}>
