@@ -1,0 +1,5 @@
+.footer{
+    background: #da6000;
+    color: #020D3F;
+    @apply py-2 text-center text-sm
+}

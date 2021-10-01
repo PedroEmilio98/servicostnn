@@ -1,10 +1,14 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
-const credenciais = require('../../credenciais.json')
+import { fromBase64 } from '../../utils/base64';
 
-const doc = new GoogleSpreadsheet('1A0KYVuOTjf8iGe9talDyEagONSDCH4RKjcy6JQ94eXI')
+
+const doc = new GoogleSpreadsheet(process.env.SHEET_ID)
 
 export default async (req, res) => {
-    await doc.useServiceAccountAuth(credenciais)
+    await doc.useServiceAccountAuth({
+        client_email: process.env.SHEET_CLIENT_EMAIL,
+        private_key: fromBase64(process.env.SHEET_PRIVATE_KEY)
+    })
     await doc.loadInfo()
 
     const reqs = (req.body)

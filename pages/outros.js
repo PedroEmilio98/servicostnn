@@ -2,7 +2,7 @@ import style from '../styles/style.module.css'
 import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
 
-const categoria = "Gastronomia"
+const categoria = "Outros"
 export const getStaticProps = async (catogira) => {
     const res = await fetch('http://localhost:3000/api/getServicos', {
         method: 'POST',

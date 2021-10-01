@@ -1,0 +1,69 @@
+@media only screen and (min-width: 900px){
+    .painel{
+        color:#a0c4e6;
+        background: #020D3F;
+        @apply text-justify p-4 px-24 pb-20
+    }
+    .h1{
+        color: #da6000;
+        @apply text-center text-5xl p-6
+    }
+    .h2{
+        color: #da6000;
+        @apply text-3xl py-4
+    }
+    .h3{
+        color: #da6000;
+        @apply text-xl py-4
+    }
+    .h4{
+        color: #da6000;
+        @apply text-lg inline
+    }
+    .categoria{
+        @apply py-2
+    }
+    .imagem{
+        @apply w-4/5 m-auto py-8
+    }
+    .paragrafo{
+        text-indent: 40px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 900px){
+.painel{
+    color:#a0c4e6;
+    font-size: x-small;
+    background: #020D3F;
+    @apply text-justify p-4
+}
+.h1{
+    color: #da6000;
+    @apply text-center text-lg
+}
+.h2{
+    color: #da6000;
+    @apply text-base py-2
+}
+.h3{
+    color: #da6000;
+    @apply text-sm py-2
+}
+.h4{
+    color: #da6000;
+    @apply text-xs inline
+}
+.categoria{
+    @apply py-1
+}
+.imagem{
+    @apply w-4/5 m-auto py-4
+}
+.paragrafo{
+    text-indent: 20px;
+}
+
+}

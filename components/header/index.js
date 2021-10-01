@@ -1,12 +1,17 @@
 import style from './style.module.css'
 import Link from 'next/link';
 
+
 export default function header() {
     return (
         <div>
             <div>
                 <div className={style.painelPrincial}>
-                    <img src='/logo.png' className='mx-auto w-48' />
+                    <Link href='/' >
+                        <a>
+                            <img src='/logo.png' className='mx-auto w-48' />
+                        </a>
+                    </Link>
                 </div>
                 <div className={style.painelInferior}>
                     <span>
@@ -15,13 +20,13 @@ export default function header() {
                         </Link>
                     </span>
                     <span>
-                        <Link href='/'>
+                        <Link href='/sobre'>
                             <a className={style.linksuperior}>Sobre</a>
                         </Link>
                     </span>
                     <span>
-                        <Link href='/' >
-                            <a className={style.linksuperior}>Sugestões</a>
+                        <Link href='/contato' >
+                            <a className={style.linksuperior}>Contato</a>
                         </Link>
                     </span>
                     <span>
@@ -59,6 +64,11 @@ export default function header() {
                     <span>
                         <Link href='/cuidados'>
                             <a className={style.links}>Cuidados Pessoais</a>
+                        </Link>
+                    </span>
+                    <span>
+                        <Link href='/outros'>
+                            <a className={style.links}>Outros</a>
                         </Link>
                     </span>
                 </div>

@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 1100px){
     
 
 .background{
@@ -50,10 +50,24 @@
     border: #020D3F solid;
     @apply  m-auto w-2/5 text-center py-12 mt-12 text-lg border-2;
 }
+.divCadastro{
+    background: #020d3f;
+    @apply py-12
+}
+.formCadastro{
+    background: #da6000;
+    color: #020d3f;
+    @apply  mx-auto text-center p-4  lg:w-2/5
+}
+.botaoSalvarCadastro{
+    background: #020d3f;
+    color: #da6000;
+    @apply block mx-auto py-4 px-12 font-bold rounded-md shadow-lg
+}
 
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1100px){
     .background{
         background: #e9f2f9;
         padding-bottom: 150px;
@@ -105,5 +119,20 @@
         border: #020D3F solid;
         @apply  m-auto w-4/5 text-center py-12 mt-12 text-base border-2;
     }
+    .divCadastro{
+        background: #020d3f;
+        
+    }
+    .formCadastro{
+        background: #da6000;
+        color: #020d3f;
+        @apply   mx-auto text-center p-4 md:w-4/5
+    }
+    .botaoSalvarCadastro{
+        background: #020d3f;
+        color: #da6000;
+        @apply block mx-auto py-4 px-12 font-bold rounded-md shadow-lg
+    }
+      
 
 }

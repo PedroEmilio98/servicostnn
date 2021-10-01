@@ -1,3 +1,13 @@
+Como adicionar uma nova categoria no site: 
+1)Criar uma nova planilha com o nome da categoria
+2)Adicionar a categoria no array categorias da pagina cadastro
+3)criar o link no header para  a pagina da nova categoria com o codigo: 
+<span>
+    <Link href='/outros'>
+        <a className={style.links}>Outros</a>
+    </Link>
+</span>
+4)Criar a view na pasta Pages para categoria e colar o codigo: 
 import style from '../styles/style.module.css'
 import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
@@ -30,3 +40,4 @@ const index = ({ servicos }) => {
   )
 }
 export default index
+5)Substituir a const categoria pelo nome da categoria (exatamente igual a planilha)
