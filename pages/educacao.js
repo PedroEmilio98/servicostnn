@@ -4,15 +4,23 @@ import ListagemVazia from '../components/listagem/listagemvazia';
 
 const categoria = "Educação"
 export const getStaticProps = async (catogira) => {
-    const res = await fetch('http://localhost:3000/api/getServicos', {
-        method: 'POST',
-        body: (categoria)
-    })
-    const data = await res.json()
-    return {
-        props: { servicos: data }
+    try {
+        const res = await fetch('http://localhost:3000/api/getServicos', {
+            method: 'POST',
+            body: (categoria)
+        })
+        const data = await res.json()
+        return {
+            props: { servicos: data }
+        }
+    } catch (err) {
+        console.log(err)
+        return {
+            props: { servicos: '' }
+        }
     }
 }
+
 
 const index = ({ servicos }) => {
     return (
