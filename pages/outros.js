@@ -3,7 +3,7 @@ import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
 
 const categoria = "Outros"
-export const getStaticProps = async (catogira) => {
+export const getServerSideProps = async (catogira) => {
     try {
         const res = await fetch('https://servicostnn.vercel.app/api/getServicos', {
             method: 'POST',

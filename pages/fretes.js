@@ -3,7 +3,7 @@ import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
 
 const categoria = "Fretes"
-export const getStaticProps = async (catogira) => {
+export const getServerSideProps = async (catogira) => {
     try {
         const res = await fetch('https://servicostnn.vercel.app/api/getServicos', {
             method: 'POST',
@@ -12,7 +12,6 @@ export const getStaticProps = async (catogira) => {
         const data = await res.json()
         return {
             props: { servicos: data },
-            revalidate: 10
         }
     } catch (err) {
         console.log(err)
