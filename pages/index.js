@@ -11,7 +11,8 @@ export const getStaticProps = async (catogira) => {
     })
     const data = await res.json()
     return {
-      props: { servicos: data }
+      props: { servicos: data },
+      revalidate: 10
     }
   } catch (err) {
     console.log(err)
