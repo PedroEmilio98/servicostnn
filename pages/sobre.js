@@ -43,10 +43,10 @@ const sobre = () => {
                     Aulas particulares, aulas de reforço, cursos, consultorias e apoio pedagógico. Recomenda-se deixar claro na descrição dos serviços se atende à distância.
                 </p>
                 <p className={style.categoria}><h4 className={style.h4}>Cuidados Pessoais: </h4>
-                    Serviços relacionados a saúde e auto-cuidado. Cuidadores de idosos, babás, profissionais de estética, personal trainers e relacionados.
+                    Serviços relacionados com auto-cuidado. Cuidadores de idosos, babás, profissionais de estética e relacionados.
                 </p>
-                <p className={style.categoria}><h4 className={style.h4}>Fretes: </h4>
-                    Serviços de deslocamento de móveis, encomendas e outros objetos dentro e fora do condomínio.
+                <p className={style.categoria}><h4 className={style.h4}>Saúde: </h4>
+                    Serviços de saúde física e mental. Medicina, enfermagem, fisioterapia, psicologia, educação física, etc.
                 </p>
                 <h3 className={style.h3}>Serviços em mais de uma categoria</h3>
                 <p className={style.paragrafo}>Infelizmente não é possível selecionar mais de uma categoria para seu serviço. Porém, se ele se enquadra em duas categorias ou você presta serviços diferentes,
