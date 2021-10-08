@@ -6,7 +6,7 @@ import style from '../styles/style.module.css'
 
 const Cadastro = () => {
 
-    const categorias = ['Manutenção', 'Gastronomia', 'Educação', 'Cuidados Pessoais', 'T.I.', 'Fretes', "Outros"]
+    const categorias = ['Manutenção', 'Gastronomia', 'Educação', 'Cuidados Pessoais', 'T.I.', 'Saúde', "Outros"]
     const [form, setForm] = useState({
         Nome: '',
         Categoria: 'Manutenção',
