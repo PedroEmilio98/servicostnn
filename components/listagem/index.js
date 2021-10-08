@@ -2,7 +2,7 @@ import style from '../../styles/style.module.css'
 import Link from 'next/link';
 
 const listagem = (props, categoria) => {
-    const zap = (numero) => `https://api.whatsapp.com/send?phone=${numero}&text=SuaMensagem`
+    const zap = (numero, nome) => `https://api.whatsapp.com/send?phone=${numero}&text=olá ${nome}`
     return (
         props.map(servico => (
             <div key={servico.Nome} className={style.servico}>
@@ -16,7 +16,7 @@ const listagem = (props, categoria) => {
                 </div>
                 <div className={style.contatos}>
                     {servico.Whatsapp &&
-                        <Link href={zap(servico.Whatsapp)}>
+                        <Link href={zap(servico.Whatsapp, servico.Nome)}>
                             <a target='_blank' rel="noreferrer">
                                 <div className={style.botaocontatowhatss}>
                                     Contato por Whatsapp

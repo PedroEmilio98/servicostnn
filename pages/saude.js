@@ -2,8 +2,8 @@ import style from '../styles/style.module.css'
 import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
 
-const categoria = "Fretes"
-export const getServerSideProps = async () => {
+const categoria = "Saúde"
+export const getStaticProps = async () => {
     try {
         const res = await fetch('https://servicostnn.vercel.app/api/getServicos', {
             method: 'POST',
@@ -11,12 +11,14 @@ export const getServerSideProps = async () => {
         })
         const data = await res.json()
         return {
-            props: { servicos: data }
+            props: { servicos: data },
+            revalidate: 10,
         }
     } catch (err) {
         console.log(err)
         return {
-            props: { servicos: '' }
+            props: { servicos: '' },
+            revalidate: 10,
         }
     }
 }

@@ -7,37 +7,46 @@ Como adicionar uma nova categoria no site:
         <a className={style.links}>Outros</a>
     </Link>
 </span>
-4)Criar a view na pasta Pages para categoria e colar o codigo: 
+4)Criar uma página de view para categoria substituindo a variavel categoria pelo nome igual a planilha:
 import style from '../styles/style.module.css'
 import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
 
-const categoria = "Manutenção"
-export const getStaticProps = async (catogira) => {
-  const res = await fetch('http://localhost:3000/api/getServicos', {
-    method: 'POST',
-    body: (categoria)
-  })
-  const data = await res.json()
-  return {
-    props: { servicos: data }
-  }
+const categoria = "Cuidados Pessoais"
+export const getServerSideProps = async () => {
+    try {
+        const res = await fetch('https://servicostnn.vercel.app/api/getServicos', {
+            method: 'POST',
+            body: (categoria)
+        })
+        const data = await res.json()
+        return {
+            props: { servicos: data },
+            revalidate: 10,
+        }
+    } catch (err) {
+        console.log(err)
+        return {
+            props: { servicos: '' },
+            revalidate: 10,
+        }
+    }
 }
 
 const index = ({ servicos }) => {
-  return (
-    <div>
-      <div className={style.background}>
-        <h1 className={style.categoria}>{categoria}</h1>
-        {servicos[0] &&
-          listagem(servicos, categoria)
-        }
-        {!servicos[0] &&
-          <ListagemVazia />
-        }
-      </div >
-    </div>
-  )
+    return (
+        <div>
+            <div className={style.background}>
+                <h1 className={style.categoria}>{categoria}</h1>
+                {servicos[0] &&
+                    listagem(servicos, categoria)
+                }
+                {!servicos[0] &&
+                    <ListagemVazia />
+                }
+            </div >
+        </div>
+    )
 }
 export default index
 5)Substituir a const categoria pelo nome da categoria (exatamente igual a planilha)

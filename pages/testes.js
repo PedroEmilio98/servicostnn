@@ -2,7 +2,7 @@ import style from '../styles/style.module.css'
 import listagem from '../components/listagem';
 import ListagemVazia from '../components/listagem/listagemvazia';
 
-const categoria = "Gastronomia"
+const categoria = "Testes"
 export const getStaticProps = async () => {
     try {
         const res = await fetch('https://servicostnn.vercel.app/api/getServicos', {

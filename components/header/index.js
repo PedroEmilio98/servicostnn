@@ -57,8 +57,8 @@ export default function header() {
                         </Link>
                     </span>
                     <span>
-                        <Link href='/fretes' >
-                            <a className={style.links}>Fretes</a>
+                        <Link href='/saude' >
+                            <a className={style.links}>Saúde</a>
                         </Link>
                     </span>
                     <span>
