@@ -4,7 +4,7 @@ import ListagemVazia from '../components/listagem/listagemvazia';
 
 const categoria = "Testes"
 export const getStaticProps = async () => {
-    const res = await fetch('https://servicostnn.vercel.app/api/getServicos', {
+    const res = await fetch(`https://servicostnn.vercel.app/api/getServicos?categoria=${categoria}`, {
         method: 'POST',
         body: (categoria)
     })
