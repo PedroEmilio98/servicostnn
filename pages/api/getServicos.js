@@ -32,11 +32,12 @@ export default async (req, res) => {
             return serv
         })
         const Ativos = dados.filter((servico) => servico.status === "Ativo")
-
+        console.log("CHAMOU")
         res.end(JSON.stringify(
             Ativos
         ))
     } catch (err) {
+        console.log("NÂO CHAMOU")
         console.log(err)
         res.end(JSON.stringify({}))
     }

@@ -1,7 +1,7 @@
 import style from '../../styles/style.module.css'
 import Link from 'next/link';
 
-const listagem = (props, categoria) => {
+const listagem = (props) => {
     const zap = (numero, nome) => `https://api.whatsapp.com/send?phone=${numero}&text=olá ${nome}`
     return (
         props.map(servico => (

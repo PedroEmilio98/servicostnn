@@ -8,7 +8,6 @@ export const getStaticPaths = async () => {
     const paths = categorias.map(categoria => (
         { params: { categoria: categoria } }
     ))
-    console.log(paths)
     return {
         paths,
         fallback: false
@@ -17,9 +16,12 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
     const url = `https://servicostnn.vercel.app/api/getServicos?categoria=${params.categoria}`
     const res = await fetch(url, {
-        method: 'POST'
+        method: 'GET'
     })
     const data = await res.json()
+    console.log('data:    ///////// ' + JSON.stringify(data))
+    console.log('data:    !!!!!!!!! ' + params.categoria)
+
     return {
         props: {
             servicos: data,
@@ -27,16 +29,18 @@ export const getStaticProps = async ({ params }) => {
         },
         revalidate: 10,
     }
+
+
 }
-const index = ({ servicos }) => {
+const index = (props) => {
     return (
         <div>
             <div className={style.background}>
-                <h1 className={style.categoria}>{servicos.categoria}</h1>
-                {servicos[0] &&
-                    listagem(servicos, servicos.categoria)
+                <h1 className={style.categoria}>{props.categoria}</h1>
+                {props.servicos[0] &&
+                    listagem(props.servicos)
                 }
-                {!servicos[0] &&
+                {!props.servicos[0] &&
                     <ListagemVazia />
                 }
             </div >
