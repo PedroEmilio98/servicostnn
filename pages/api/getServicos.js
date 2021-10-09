@@ -12,11 +12,9 @@ export default async (req, res) => {
     await doc.loadInfo()
 
     const reqs = (req.body)
-    console.log(req.query.categoria)
-    const categoria = req.query.categoria
 
     try {
-        const planilha = doc.sheetsByTitle[categoria]
+        const planilha = doc.sheetsByTitle[reqs]
         const linhas = await planilha.getRows()
 
         const dados = linhas.map((linha) => {

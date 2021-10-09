@@ -14,14 +14,13 @@ export const getStaticPaths = async () => {
     }
 }
 export const getStaticProps = async ({ params }) => {
-    const url = `https://servicostnn.vercel.app/api/getServicos?categoria=${params.categoria}`
+    const url = `http://localhost:3000/api/getServicos`
     const res = await fetch(url, {
-        method: 'GET'
+        body: params.categoria,
+        method: 'POST',
+
     })
     const data = await res.json()
-    console.log('data:    ///////// ' + JSON.stringify(data))
-    console.log('data:    !!!!!!!!! ' + params.categoria)
-
     return {
         props: {
             servicos: data,
