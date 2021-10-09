@@ -38,8 +38,8 @@ export default function header() {
                 </div>
                 <div className={style.painelInferiorFixo}>
                     {categorias.map(categoria => (
-                        <span>
-                            <Link href={categoria} key={categoria}>
+                        <span key={categoria}>
+                            <Link href={categoria} >
                                 <a className={style.links}>{categoria}</a>
                             </Link>
                         </span>
