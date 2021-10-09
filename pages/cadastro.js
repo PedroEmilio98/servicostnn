@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/style.module.css'
+import categorias from '../utils/categorias'
 
 
 
 
 const Cadastro = () => {
 
-    const categorias = ['Manutenção', 'Gastronomia', 'Educação', 'Cuidados Pessoais', 'T.I.', 'Saúde', "Outros"]
     const [form, setForm] = useState({
         Nome: '',
         Categoria: 'Manutenção',

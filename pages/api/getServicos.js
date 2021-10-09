@@ -12,25 +12,32 @@ export default async (req, res) => {
     await doc.loadInfo()
 
     const reqs = (req.body)
+    console.log(req.query.categoria)
+    const categoria = req.query.categoria
 
-    const planilha = doc.sheetsByTitle[reqs]
-    const linhas = await planilha.getRows()
+    try {
+        const planilha = doc.sheetsByTitle[categoria]
+        const linhas = await planilha.getRows()
 
-    const dados = linhas.map((linha) => {
-        const serv = {
-            Nome: linha.Nome,
-            Servicos: linha.Servicos,
-            Whatsapp: linha.Whatsapp,
-            Facebook: linha.Facebook,
-            Instagram: linha.Instagram,
-            horarioFuncionamento: linha.horarioFuncionamento,
-            status: linha.Status
-        }
-        return serv
-    })
-    const Ativos = dados.filter((servico) => servico.status === "Ativo")
+        const dados = linhas.map((linha) => {
+            const serv = {
+                Nome: linha.Nome,
+                Servicos: linha.Servicos,
+                Whatsapp: linha.Whatsapp,
+                Facebook: linha.Facebook,
+                Instagram: linha.Instagram,
+                horarioFuncionamento: linha.horarioFuncionamento,
+                status: linha.Status
+            }
+            return serv
+        })
+        const Ativos = dados.filter((servico) => servico.status === "Ativo")
 
-    res.end(JSON.stringify(
-        Ativos
-    ))
+        res.end(JSON.stringify(
+            Ativos
+        ))
+    } catch (err) {
+        console.log(err)
+        res.end(JSON.stringify({}))
+    }
 }

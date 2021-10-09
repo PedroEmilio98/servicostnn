@@ -1,4 +1,5 @@
 import style from './style.module.css'
+import categorias from '../../utils/categorias'
 import Link from 'next/link';
 
 
@@ -36,41 +37,13 @@ export default function header() {
                     </span>
                 </div>
                 <div className={style.painelInferiorFixo}>
-                    <span>
-                        <Link href='/' >
-                            <a className={style.links}>Manutenção</a>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link href='/ti'>
-                            <a className={style.links}>T.I.</a>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link href='/educacao' >
-                            <a className={style.links}>Educação</a>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link href='/gastronomia' >
-                            <a className={style.links}>Gastronomia</a>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link href='/saude' >
-                            <a className={style.links}>Saúde</a>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link href='/cuidados'>
-                            <a className={style.links}>Cuidados Pessoais</a>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link href='/outros'>
-                            <a className={style.links}>Outros</a>
-                        </Link>
-                    </span>
+                    {categorias.map(categoria => (
+                        < span key={categoria}>
+                            <Link href={categoria}>
+                                <a className={style.links}>{categoria}</a>
+                            </Link>
+                        </span>
+                    ))}
                 </div>
             </div>
         </div >
