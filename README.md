@@ -1,3 +1,8 @@
+Site criado para facilitar o contato entre prestadores de serviço e moradores de um condomínio. O projeto foi criado utilizando como base o projeto PalpiteBox, 
+do curso DevPleno. Criado com Next.js e hospedado na vercel.
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
